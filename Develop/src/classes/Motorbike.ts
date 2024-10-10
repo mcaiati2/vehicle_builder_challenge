@@ -12,7 +12,7 @@ class Motorbike extends Vehicle {
   year: number;
   weight: number;
   topSpeed: number;
-  wheels: String[];
+  wheels: Wheel[]
 
 
   constructor(
@@ -35,11 +35,11 @@ class Motorbike extends Vehicle {
     this.year = year;
     this.weight = weight;
     this.topSpeed = topSpeed;
-    this.wheels = wheels;
+    // this.wheels = wheel;
 
-    if (this.wheels.length !== 2){
-      [new Wheel(), new Wheel()];
-    }
+    // if (this.wheels.length !== 2){
+    //   [new Wheel(), new Wheel()];
+    // }
 
     function wheelie() {
       console.log(`Motorbike ${make} ${model} is doing a wheelie!`)
@@ -61,7 +61,7 @@ class Motorbike extends Vehicle {
 
 
  
-
+// TODO fix wheels 
   // DONE Declare properties of the Motorbike class
   // DONE The properties should include vin, color, make, model, year, weight, top speed, and wheels
   //DONE The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
