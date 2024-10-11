@@ -40,10 +40,10 @@ class Motorbike extends Vehicle {
     if (this.wheels.length !== 2){
       [new Wheel(), new Wheel()];
     }
+  }
 
-    function wheelie() {
-      console.log(`Motorbike ${make} ${model} is doing a wheelie!`)
-    }
+  wheelie(): void {
+    console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`)
   }
 
   override printDetails(): void {
