@@ -158,22 +158,22 @@ class Cli {
           message: 'Enter Model',
         },
         {
-          type: 'input',
+          type: 'number',
           name: 'year',
           message: 'Enter Year',
         },
         {
-          type: 'input',
+          type: 'number',
           name: 'weight',
           message: 'Enter Weight',
         },
         {
-          type: 'input',
+          type: 'number',
           name: 'topSpeed',
           message: 'Enter Top Speed',
         },
         {
-          type: 'input',
+          type: 'number',
           name: 'towingCapacity',
           message: 'Enter Towing Capacity',
         },

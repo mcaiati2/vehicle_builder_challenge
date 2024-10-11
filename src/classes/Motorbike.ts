@@ -7,13 +7,13 @@ import Wheel from './Wheel.js';
 class Motorbike extends Vehicle {
 
   constructor(
-    vin: string, 
-    color: string, 
-    make: string, 
-    model: string, 
-    year: number, 
-    weight: number, 
-    topSpeed: number, 
+    vin: string,
+    color: string,
+    make: string,
+    model: string,
+    year: number,
+    weight: number,
+    topSpeed: number,
     wheels: Wheel[]
     // "set this way because wheels should be an array of wheel objects, (NOT an array of strings)."
   ) {
@@ -26,7 +26,7 @@ class Motorbike extends Vehicle {
     this.weight = weight;
     this.topSpeed = topSpeed;
     this.wheels = wheels;
-    if (this.wheels.length !== 2){
+    if (this.wheels.length !== 2) {
       [new Wheel(), new Wheel()];
     }
   }
@@ -46,7 +46,6 @@ class Motorbike extends Vehicle {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
-    
     console.log(
       `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
     );
@@ -54,18 +53,18 @@ class Motorbike extends Vehicle {
       `Wheel 2: ${this.wheels[1].getDiameter} inch with a ${this.wheels[1].getTireBrand} tire`
     );
   }
- 
+
   // DONE Declare properties of the Motorbike class
   // DONE The properties should include vin, color, make, model, year, weight, top speed, and wheels
   //DONE The types should be as follows: vin (string), color (string), make (string), model (string), year (number), weight (number), topSpeed (number), wheels (Wheel[])
 
   // DONE Create a constructor that accepts the properties of the Motorbike class
-    // DONE The constructor should call the constructor of the parent class, Vehicle
-    // DONE The constructor should initialize the properties of the Motorbike class
-    // DONE The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
+  // DONE The constructor should call the constructor of the parent class, Vehicle
+  // DONE The constructor should initialize the properties of the Motorbike class
+  // DONE The constructor should check if the wheels array has 2 elements and create 2 new default Wheel objects if it does not
 
   // DONE Implement the wheelie method
-    // DONE The method should log the message "Motorbike [make] [model] is doing a wheelie!"
+  // DONE The method should log the message "Motorbike [make] [model] is doing a wheelie!"
 
   // DONE Override the printDetails method from the Vehicle class
   // DONE The method should call the printDetails method of the parent class
