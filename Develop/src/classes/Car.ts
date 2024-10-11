@@ -16,8 +16,7 @@ class Car extends Vehicle {
 
   // Constructor for the Car class
   constructor(
-    started: boolean,
-    currentSpeed: number,
+
     vin: string,
     color: string,
     make: string,

@@ -122,13 +122,11 @@ class Cli {
           answers.color,
           answers.make,
           answers.model,
-          answers.year,
-          answers.weight,
-          answers.topSpeed,
+
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          []
+          [new Wheel(), new Wheel(), new Wheel(), new Wheel()]
         );
         // push the car to the vehicles array
         this.vehicles.push(car);
@@ -272,7 +270,7 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          []
+          [],
         )
         // DONE Use the answers object to pass the required properties to the Motorbike constructor
         // DONE push the motorbike to the vehicles array
