@@ -5,19 +5,8 @@ import Wheel from './Wheel.js';
 
 // DONE The Motorbike class should extend the Vehicle class
 class Motorbike extends Vehicle {
-  vin: string;
-  color: string;
-  make: string;
-  model: string;
-  year: number;
-  weight: number;
-  topSpeed: number;
-  wheels: Wheel[];
-
 
   constructor(
-    started: boolean, 
-    currentSpeed: number, 
     vin: string, 
     color: string, 
     make: string, 
@@ -28,7 +17,7 @@ class Motorbike extends Vehicle {
     wheels: Wheel[]
     // "set this way because wheels should be an array of wheel objects, (NOT an array of strings)."
   ) {
-    super(started, currentSpeed);
+    super(vin, color, make, model, year, weight, topSpeed, wheels);
     this.vin = vin;
     this.color = color;
     this.make = make;

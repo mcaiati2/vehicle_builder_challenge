@@ -28,6 +28,7 @@ class Cli {
     );
   }
 
+
   // method to choose a vehicle from existing vehicles
   chooseVehicle(): void {
     inquirer
@@ -116,17 +117,16 @@ class Cli {
         },
       ])
       .then((answers) => {
-        const car = new Car(
+        const car: Car = new Car(
           // DONE The generateVin method is static and should be called using the class name Cli, make sure to use Cli.generateVin() for creating a truck and motorbike as well!
           Cli.generateVin(),
           answers.color,
           answers.make,
           answers.model,
-
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          [new Wheel(), new Wheel(), new Wheel(), new Wheel()]
+          [],
         );
         // push the car to the vehicles array
         this.vehicles.push(car);
@@ -135,7 +135,7 @@ class Cli {
         // perform actions on the car
         this.performActions();
       });
-  }
+  };
 
   // method to create a truck
   createTruck(): void {
@@ -183,15 +183,12 @@ class Cli {
           answers.color,
           answers.make,
           answers.model,
-          answers.year,
-          answers.weight,
-          answers.topSpeed,
-          answers.towingCapacity,
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          []
-        )
+          [],
+          answers.towingCapacity,
+        );
 
         // DONE Use the answers object to pass the required properties to the Truck constructor
         this.vehicles.push(truck);
@@ -264,9 +261,6 @@ class Cli {
           answers.color,
           answers.make,
           answers.model,
-          answers.year,
-          answers.weight,
-          answers.topSpeed,
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
