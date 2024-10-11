@@ -140,6 +140,7 @@ class Cli {
   // method to create a truck
   createTruck(): void {
     inquirer
+      // TODO change relative number to numbers
       .prompt([
         {
           type: 'input',
@@ -392,7 +393,7 @@ class Cli {
           // find the selected vehicle and reverse it
           vehicle?.reverse();
 
-          // TODO: add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
+          // DONE add statements to perform the tow action only if the selected vehicle is a truck. Call the findVehicleToTow method to find a vehicle to tow and pass the selected truck as an argument. After calling the findVehicleToTow method, you will need to return to avoid instantly calling the performActions method again since findVehicleToTow is asynchronous.
         } else if (answers.action === 'Tow') {
           if (vehicle instanceof Truck) {
             this.findVehicleToTow(vehicle as Truck);
@@ -402,11 +403,13 @@ class Cli {
         } else if (answers.action === 'Wheelie') {
           if (vehicle instanceof Motorbike) {
             (vehicle as Motorbike).wheelie();
-
+          } else {
+            console.log('Only motorbikes can do wheelies');
           }
-        }
-        // DONE add statements to perform the wheelie action only if the selected vehicle is a motorbike
-        else if (answers.action === 'Select or create another vehicle') {
+
+
+          // DONE add statements to perform the wheelie action only if the selected vehicle is a motorbike
+        } else if (answers.action === 'Select or create another vehicle') {
 
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();
