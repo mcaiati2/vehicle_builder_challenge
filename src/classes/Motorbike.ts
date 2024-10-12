@@ -26,10 +26,15 @@ class Motorbike extends Vehicle {
     this.weight = weight;
     this.topSpeed = topSpeed;
     this.wheels = wheels;
-    if (wheels.length !== 2) {
+    if (wheels.length !== 2 ) {
+      this.wheels = [new Wheel(), new Wheel()];
+    }
+    if (!this.wheels[0].getDiameter || !this.wheels[1].getDiameter) {
+      console.log('Both wheels require a valid number! Assigning default wheels to the motorcycle.');
       this.wheels = [new Wheel(), new Wheel()];
     }
   }
+  
 
   wheelie(): void {
     console.log(`Motorbike ${this.make} ${this.model} is doing a wheelie!`)
@@ -46,6 +51,7 @@ class Motorbike extends Vehicle {
     console.log(`Year: ${this.year}`);
     console.log(`Weight: ${this.weight} lbs`);
     console.log(`Top Speed: ${this.topSpeed} mph`);
+    
     console.log(
       `Wheel 1: ${this.wheels[0].getDiameter} inch with a ${this.wheels[0].getTireBrand} tire`
     );
