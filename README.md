@@ -18,6 +18,7 @@ The vehicle builder is an app that lets you build a custom car, truck, or motorc
 You must install inquirerer by running npm install inquirer from your terminal.Once you download the code, you can start the application by opening your terminal and typing npm start.
 
 ## Usage
+[Video Walkthrough](https://drive.google.com/file/d/1Tww5K8i9IeRnXmb7tVbzRsxHZc_LxPB9/view?usp=sharing).
 Once you run npm start, you will be prompted to either create a new vehicle or view existing vehicle. Enter the relevant information for the vehicle you're building, such as the color, make, model, top speed, vin number, and towing capacity. Once you've created or selected a vehicle, you will be propmpted for the action you'd like the vehicle to perform. You are able to accellerate, decelerate, turn, reverse, or select/create another vehicle. To exit the application, simply choose the 'Exit' prompt.
 
 ## Contributing

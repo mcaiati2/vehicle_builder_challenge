@@ -140,7 +140,6 @@ class Cli {
   // method to create a truck
   createTruck(): void {
     inquirer
-      // TODO change relative number to numbers
       .prompt([
         {
           type: 'input',

@@ -24,17 +24,9 @@ class Truck extends Vehicle implements AbleToTow {
     towingCapacity: number,
   ) {
     super(vin, color, make, model, year, weight, topSpeed, wheels);
-    this.vin = vin;
-    this.color = color;
-    this.make = make;
-    this.model = model;
-    this.year = year;
-    this.weight = weight;
-    this.topSpeed = topSpeed;
-    this.wheels = wheels;
     this.towingCapacity = towingCapacity;
     if (wheels.length !== 4) {
-      [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
+      this. wheels = [new Wheel(), new Wheel(), new Wheel(), new Wheel()];
     }
   }
   // DONE The properties should include vin, color, make, model, year, weight, top speed, wheels, and towing capacity
@@ -44,6 +36,7 @@ class Truck extends Vehicle implements AbleToTow {
   // DONE The constructor should call the constructor of the parent class, Vehicle
   // DONE The constructor should initialize the properties of the Truck class
   // DONE The constructor should check if the wheels array has 4 elements and create 4 new default Wheel objects if it does not
+  
 
 
   // DONE Implement the tow method from the AbleToTow interface
@@ -60,6 +53,7 @@ class Truck extends Vehicle implements AbleToTow {
       console.log('The vehicle is too heavy to be towed');
     }
   }
+  
   // DONE If it is, log that the vehicle is being towed
   // DONE If it is not, log that the vehicle is too heavy to be towed
 
